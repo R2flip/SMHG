@@ -34,7 +34,11 @@ def load_data():
 data = load_data()
 
 st.subheader("Dataset Preview")
-st.dataframe(data.head(10))
+st.dataframe(
+    data.head(10),
+    use_container_width=True,
+    hide_index=True
+)
 
 
 # -----------------------------
