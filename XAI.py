@@ -127,28 +127,11 @@ else:
 
 plt.figure(figsize=(9, 6))
 
-explainer = shap.TreeExplainer(model)
-
-shap_values = explainer.shap_values(input_df)
-
-exp = shap.Explanation(
-    values=shap_values[1][0],
-    base_values=explainer.expected_value[1],
-    data=input_df.iloc[0],
-    feature_names=input_df.columns.tolist()
-)
-
-fig, ax = plt.subplots(figsize=(10,6))
-
 shap.plots.waterfall(
-    exp,
-    max_display=min(10, len(input_df.columns)),
+    explanation,
+    max_display=15,
     show=False
 )
-
-st.pyplot(fig)
-
-plt.close(fig)
 
 st.pyplot(plt.gcf())
 plt.clf()
