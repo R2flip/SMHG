@@ -25,7 +25,7 @@ st.title("Help Seeking Behavior Prediction with Explainable AI")
 @st.cache_data
 def load_data():
     data = pd.read_excel(
-        r"SMHG20260519_R02.xlsx",
+        r"SMHG20260519_R03.xlsx",
         engine="openpyxl"
     )
     return data
