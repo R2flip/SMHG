@@ -25,7 +25,7 @@ st.title("Understanding the Intention–Behavior Gap with Explainable AI")
 @st.cache_data
 def load_data():
     data = pd.read_excel(
-        r"C:\Users\Ncku_user\Desktop\投稿期刊文稿\04-TimeLagged+XAI\Paperdata_filtered_107_112(Real_CH03).xlsx",
+        r"Paperdata_filtered_107_112(Real_CH03).xlsx",
 
         engine="openpyxl"
     )
