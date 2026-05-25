@@ -34,8 +34,8 @@ def load_data():
 
 data = load_data()
 
-st.subheader("Dataset Preview")
-st.dataframe(data.head(10))
+#st.subheader("Dataset Preview")
+#st.dataframe(data.head(10))
 
 
 # -----------------------------
